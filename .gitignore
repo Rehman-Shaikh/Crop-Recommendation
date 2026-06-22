@@ -1,0 +1,18 @@
+# 1. Virtual Environment (Sabse zaroori - iska size bahut bada hota hai)
+venv/
+ENV/
+env/
+
+# 2. Python Cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 3. Jupyter Notebook Checkpoints (Agar aapne local notebook run ki hai)
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# 4. OS specific files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,59 @@
+body {
+    background-color: #f8f9fa;
+    background-image: url('../images/farm-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(40, 167, 69, 0.9) !important;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgba(33, 37, 41, 0.9) !important;
+}
+
+.display-4 {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.list-group-item {
+    background-color: transparent;
+}

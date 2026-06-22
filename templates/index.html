@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="card shadow">
+            
+            <div class="card-header bg-success text-white">
+                <h2 class="mb-0"><i class="fas fa-seedling me-2"></i>Enter Soil and Climate Details</h2>
+            </div>
+            
+            <div class="card-body">
+                
+            <div class="project-description mb-4 p-3 border-start border-success border-4 bg-light rounded">
+                <h4 class="text-success fw-bold"><i class="fas fa-info-circle me-2"></i>About Project</h4>
+                <p class="text-muted mb-0">
+                    This system leverages <strong>Machine Learning</strong> technology to assist farmers in determining the most suitable crop for their land. By analyzing soil nutrient parameters (Nitrogen, Phosphorus, Potassium, pH) along with climatic factors (Temperature, Humidity, Rainfall), our model delivers accurate recommendations to optimize crop yield.
+                </p>
+            </div>
+                
+                <form action="/predict" method="POST">
+                    <div class="row g-3">
+                        
+                        <div class="col-md-6">
+                            <label for="nitrogen" class="form-label">Nitrogen (N) level</label>
+                            <input type="number" step="0.1" class="form-control" id="nitrogen" name="nitrogen" required>
+                            <div class="form-text">Nitrogen content in soil (kg/ha)</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="phosphorus" class="form-label">Phosphorus (P) level</label>
+                            <input type="number" step="0.1" class="form-control" id="phosphorus" name="phosphorus" required>
+                            <div class="form-text">Phosphorus content in soil (kg/ha)</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="potassium" class="form-label">Potassium (K) level</label>
+                            <input type="number" step="0.1" class="form-control" id="potassium" name="potassium" required>
+                            <div class="form-text">Potassium content in soil (kg/ha)</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="temperature" class="form-label">Temperature (°C)</label>
+                            <input type="number" step="0.1" class="form-control" id="temperature" name="temperature" required>
+                            <div class="form-text">Average temperature in your area</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="humidity" class="form-label">Humidity (%)</label>
+                            <input type="number" step="0.1" class="form-control" id="humidity" name="humidity" required>
+                            <div class="form-text">Relative humidity in your area</div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="ph" class="form-label">Soil pH</label>
+                            <input type="number" step="0.1" min="0" max="14" class="form-control" id="ph" name="ph" required>
+                            <div class="form-text">Soil pH level (0-14 scale)</div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="rainfall" class="form-label">Rainfall (mm)</label>
+                            <input type="number" step="0.1" class="form-control" id="rainfall" name="rainfall" required>
+                            <div class="form-text">Annual rainfall in your area</div>
+                        </div>
+                        
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-success btn-lg w-100">
+                                <i class="fas fa-calculator me-2"></i>Recommend Crop
+                            </button>
+                        </div>
+                        
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
